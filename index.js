@@ -3,10 +3,10 @@ function fibonacci(n) {
 	return n < 1 ? 0 : n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2)
 }
 
-function fib(iteration) {
+function fib(iterations) {
 	return new Promise( function(resolve) {
 		const start = Date.now()
-		const result = fibonacci(iteration)
+		const result = fibonacci(iterations)
 		console.log(`fib action done in: ${Date.now() - start}ms`)
 		resolve(result)
 	})
